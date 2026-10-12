@@ -98,6 +98,15 @@ a {
     font-size: 28px;
     cursor: pointer;
 }
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: inherit;
+}
 
 /* fisrt section from the page  */
 
@@ -434,12 +443,27 @@ a {
 
     /* Navigation */
 
-    .nav {
-        display: none;
-    }
-
+     /* show the hamburger on mobile */
     .menu-btn {
         display: block;
+    }
+
+    /* hide the nav by default on mobile */
+    .nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;          /* change to your header height */
+        right: 0;
+        width: 100%;
+        background: #fff;   /* change to match your design */
+        padding: 20px;
+        text-align: center;
+    }
+
+    /* shown when JavaScript adds the "active" class */
+    .nav.active {
+        display: flex;
     }
 
 
